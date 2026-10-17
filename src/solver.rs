@@ -155,6 +155,7 @@ mod libraries {
         (0usize..).map(|i| (0usize..).map(move |j| (j, (i >> j) & 1 != 0)))
     }
 
+    #[derive(PartialEq, Eq, PartialOrd, Ord, Hash)]
     pub struct AsciiString {
         inner: Vec<u8>,
     }
